@@ -1,0 +1,116 @@
+/*
+ * SORA Design System — tokens e fontes locais
+ * Fonte: desing_system/sora-design-system.zip (design-system.html)
+ * Superfícies de vidro preto, acento azul-céu e entrada suave com fade.
+ */
+
+/* Fontes variáveis locais extraídas do SORA Design System (pesos 300–700) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('../assets/sora/inter-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('../assets/sora/geist-latin.woff2') format('woff2');
+}
+
+:root {
+  /* Tipografia */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji',
+    'Segoe UI Emoji', sans-serif;
+  --font-display: 'Geist', 'Inter', system-ui, sans-serif;
+
+  /* Marca e acento */
+  --color-accent: rgb(56, 189, 248); /* sky-400 — eyebrows, labels, valores positivos */
+  --color-accent-soft: rgb(125, 211, 252); /* sky-300 — ícones de check */
+  --color-accent-strong: rgb(186, 230, 253); /* sky-200 — texto da aba selecionada */
+  --color-action: rgb(2, 132, 199); /* sky-600 — botão sólido */
+  --color-action-hover: rgb(14, 165, 233); /* sky-500 */
+
+  /* Superfícies */
+  --surface-page: rgb(0, 0, 0);
+  --surface-glass: rgba(255, 255, 255, 0.04); /* painel de vidro */
+  --surface-veil: rgba(255, 255, 255, 0.05); /* pill de navegação, itens */
+  --surface-selected: rgba(255, 255, 255, 0.1);
+  --surface-hover: rgba(255, 255, 255, 0.15);
+  --surface-info: rgba(14, 165, 233, 0.1);
+  --surface-accent: rgba(14, 165, 233, 0.2);
+  --surface-positive: rgba(16, 185, 129, 0.1);
+  --surface-negative: rgba(239, 68, 68, 0.1);
+  --surface-footer: rgba(0, 0, 0, 0.4);
+
+  /* Texto */
+  --text-primary: rgb(255, 255, 255);
+  --text-display: rgba(255, 255, 255, 0.95);
+  --text-high: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-body: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-faint: rgba(255, 255, 255, 0.4);
+  --text-label: rgb(163, 163, 163); /* neutral-400 */
+  --text-soft: rgb(212, 212, 212); /* neutral-300 */
+
+  /* Bordas */
+  --border-hairline: rgba(255, 255, 255, 0.1);
+  --border-accent: rgba(14, 165, 233, 0.3);
+  --border-accent-hover: rgba(56, 189, 248, 0.6);
+  --border-info: rgba(14, 165, 233, 0.2);
+  --border-positive: rgba(16, 185, 129, 0.2);
+  --border-negative: rgba(239, 68, 68, 0.2);
+
+  /* Semântica */
+  --color-positive: rgb(52, 211, 153); /* emerald-400 */
+  --color-negative: rgb(248, 113, 113); /* red-400 */
+  --color-warning: rgb(250, 204, 21);
+
+  /* Raios */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px; /* painel de vidro */
+  --radius-2xl: 24px; /* card de destaque */
+  --radius-full: 999px;
+
+  /* Efeitos */
+  --blur-md: blur(12px);
+  --blur-xl: blur(24px);
+  --shadow-glass: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inset: inset 0 1px 1px rgba(255, 255, 255, 0.06);
+  --shadow-accent: 0 25px 50px -12px rgba(14, 165, 233, 0.3);
+  --glow-accent: radial-gradient(1000px 500px at 10% 0%, rgba(14, 165, 233, 0.12), transparent 60%);
+
+  /* Movimento */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --duration-fast: 300ms;
+  --duration-base: 500ms;
+  --duration-shine: 1000ms;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
